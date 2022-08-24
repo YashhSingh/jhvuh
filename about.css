@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+  font-family: "Lobster", cursive;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  transition: 0.4s ease;
+
+  /* logic for above is :- 
+    font size 100%  that is 1 rem(rootelement) is 16 px
+    so to make it responsive => 100/16 = 6.25 and we want 1 rem to be 10px but we dont want to 
+    write it mannually as fontsize:10px; so we took the value of 1 px as how much percent 
+    and then we multiply value of 1px to 10px which is 62.5%
+    */
+}
+.website__header {
+  position: relative;
+  background-color: transparent;
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  /* border-bottom: 0.1rem solid #97db77; */
+}
+
+.website_header_main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.nav_item {
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.nav_item a {
+  text-decoration: none;
+  font-size: 2.2rem;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+
+  /* background: -webkit-linear-gradient(#56ab2f, #a8e063);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+  color: #e34ae8;
+
+  display: block;
+}
+
+.nav_item a:hover {
+  color: #a8eaf7;
+
+  transition: 0.2s ease;
+}
+
+/* .nav_ul {
+    margin-bottom: 1rem;
+  } */
+
+.brand_area {
+  background: linear-gradient(to right, #ca36cf 0%, #44b8cf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 5rem;
+  margin-left: 8rem;
+}
+.main_div {
+  display: grid;
+  grid-template-rows: 70vh;
+}
+.info_part {
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 70%;
+}
+.heading {
+  flex: 1;
+  font-size: 3rem;
+  font-family: "Poppins", sans-serif;
+  border-bottom: 0.1rem solid black;
+}
+.info_part p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 1000;
+  font-size: 1.3rem;
+  margin-top: 11rem;
+}
+.inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+/* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media only screen and (max-width: 575.98px) {
+  html {
+    font-size: 50%;
+  }
+  .info_part {
+    margin: 0%;
+  }
+  .info_part p {
+    margin-top: 4rem;
+  }
+  .footer {
+    margin-top: 5rem;
+    grid-template-rows: 5vh;
+  }
+  .footer i {
+    font-size: 2rem;
+  }
+  .brand_area {
+    font-size: 8rem;
+  }
+}
+
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media only screen and (max-width: 767.98px) {
+  html {
+    font-size: 50%;
+  }
+  .info_part p {
+    margin-top: 4rem;
+  }
+}
+
+/* // `lg` applies to medium devices (tablets, less than 992px) */
+@media only screen and (max-width: 991.98px) {
+  html {
+    font-size: 100%;
+  }
+  .info_part p {
+    margin-top: 4rem;
+  }
+  /* .brand_area {
+    font-size: 9rem;
+    margin-left: 40%;
+  }
+  .hidden {
+    display: block;
+    z-index: 1;
+    font-size: 3rem;
+  }
+  .nav_ul {
+    position: absolute;
+    top: 55%;
+    right: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    max-width: 25rem;
+    background-color: #f2f2f2;
+    border-radius: 1.1rem;
+    transition: 0.5s ease;
+  }
+  .nav_item a {
+    font-size: 1.9rem;
+  }
+  .search_bar {
+    width: 15rem;
+    margin-left: 2rem;
+  }
+  .website_header_main {
+    height: 22rem;
+  } */
+}
+/* // `xl` applies to large devices (desktops, less than 1200px)
+@media  only screen and (max-width: 1199.98px) { ... } */
+
+/* // `xxl` applies to x-large devices (large desktops, less than 1400px)
+@media  only screen and (max-width: 1399.98px) { ... }  */
